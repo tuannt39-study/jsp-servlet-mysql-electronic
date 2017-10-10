@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="back" template="/WEB-INF/tiles/layout/back.jsp">
+    
+    </definition>
+
+    <definition name="front" template="/WEB-INF/tiles/layout/user.jsp">
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/front/head.jsp" />
+        <put-attribute name="headermodal" value="/WEB-INF/tiles/widget/front/headermodal.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/front/header.jsp" />
+        <put-attribute name="navigation" value="/WEB-INF/tiles/widget/front/navigation.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="newsletter" value="/WEB-INF/tiles/widget/front/newsletter.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/front/footer.jsp" />
+    </definition>
+    
+    <!-- ====================== -->
+
+    <definition name="error403" extends="front">
+        <put-attribute name="title" value="Electronic Store | Access denied" />
+        <put-attribute name="content" value="/WEB-INF/pages/error/403.jsp" />
+    </definition>
+
+    <definition name="error404" extends="front">
+        <put-attribute name="title" value="Electronic Store | Page not found" />
+        <put-attribute name="content" value="/WEB-INF/pages/error/404.jsp" />
+    </definition>
+
+    <!-- ====================== -->
+
+    <definition name="index" extends="front">
+        <put-attribute name="title" value="Electronic Store | Trang chủ" />
+        <put-attribute name="content" value="/WEB-INF/pages/front/index.jsp" />
+    </definition>
+
+    <!-- ====================== -->
+
+    <definition name="home" extends="back">
+    
+    </definition>
+    
+</tiles-definitions>
